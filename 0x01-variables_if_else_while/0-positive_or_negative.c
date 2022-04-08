@@ -1,12 +1,9 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-
-/*
+/**
  * main - prints a random number
- * @n: this is the variable that stores the random number
- *
- * Description: simply prints a random number each time the code is run
+ * Description - What the hell. Aah!
  * Return: returns 0 on sucessful run
  */
 int main(void)
