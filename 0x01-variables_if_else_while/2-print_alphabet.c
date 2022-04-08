@@ -8,14 +8,10 @@
  */
 int main(void)
 {
-	char s[27] = "abcdefghijklmnopqrstuvwxyz";
-	int flag = 0;
+	char s;
 	
-	while (flag <= 26)
-	{
-		putchar(s[flag]);
-		flag = flag + 1;
-	}
+	for (s = 'a'; s <= 'z'; s++)
+		putchar(s);
 	putchar('\n');
 	return (0);
 }
