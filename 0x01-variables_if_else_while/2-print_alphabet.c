@@ -9,10 +9,13 @@
 int main(void)
 {
 	char s[27] = "abcdefghijklmnopqrstuvwxyz";
-	int flag;
-
-	for (flag = 0; flag <= 26; flag++)
+	int flag = 0;
+	
+	while (flag <= 26)
+	{
 		putchar(s[flag]);
+		flag = flag + 1;
+	}
 	putchar('\n');
 	return (0);
 }
