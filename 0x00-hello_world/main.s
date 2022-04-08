@@ -5,13 +5,25 @@
 # GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
 # options passed: -masm=intel -mtune=generic -march=x86-64 -Og
 	.text
+	.section	.rodata.str1.1,"aMS",@progbits,1
+.LC0:
+	.string	"Holberton School"
+	.text
 	.globl	main
 	.type	main, @function
 main:
 .LFB11:
 	.cfi_startproc
-# main.c:11: }
+	sub	rsp, 8	#,
+	.cfi_def_cfa_offset 16
+# main.c:10: 	printf("Holberton School");
+	mov	edi, OFFSET FLAT:.LC0	#,
 	mov	eax, 0	#,
+	call	printf	#
+# main.c:12: }
+	mov	eax, 0	#,
+	add	rsp, 8	#,
+	.cfi_def_cfa_offset 8
 	ret	
 	.cfi_endproc
 .LFE11:
