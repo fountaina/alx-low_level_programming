@@ -23,8 +23,10 @@ int main(void)
 				putchar(',');
 				putchar(' ');
 				if (flag != 9)
+				{
 					putchar(num1);
 					flag++;
+				}
 			}
 		}
 	}
