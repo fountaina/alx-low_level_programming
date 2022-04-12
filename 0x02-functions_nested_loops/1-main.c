@@ -1,5 +1,4 @@
 #include "main.h"
-#include "1-aphabet.c"
 
 /**
  * main - check the code fo
