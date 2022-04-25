@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
  * _strcmp - comparison of two strings
@@ -15,14 +16,18 @@ int _strcmp(char *s1, char *s2)
 	unsigned char tester2;
 
 	i = 0;
-	tester1 = s1[i];
-	tester2 = s2[i];
+	tester1 = '0';
+	tester2 = '0';
 	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		tester1 = s1[i] + tester1;
 		tester2 = s2[i] + tester2;
 		i++;
 	}
+	/**
+	*printf("This is the value of s1: %d\n", tester1);
+	*printf("This is the value of s2: %d\n", tester2);
+	*/
 
 	if (tester1 == tester2)
 	{
