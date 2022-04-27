@@ -13,6 +13,7 @@ char *_strchr(char *s, char c)
 	static char finder_str[98];
 	int finder_str_counter;
 	int i;
+	int found_occurance = 0;
 
 	counter = 0;
 	finder_str_counter = 0;
@@ -25,6 +26,7 @@ char *_strchr(char *s, char c)
 	{
 		if (s[counter] == c)
 		{
+			found_occurance = 1;
 			while (s[counter] != '\0')
 			{
 				finder_str[finder_str_counter] = s[counter];
@@ -39,5 +41,9 @@ char *_strchr(char *s, char c)
 			continue;
 		}
 	}
+	if (found_occurance == 1)
+		return (finder_str);
+	else if (found_occurance == 0)
+		return ('\0');
 	return (finder_str);
 }
