@@ -13,22 +13,16 @@ char *_strchr(char *s, char c)
 	static char finder_str[98];
 	int finder_str_counter;
 	int found_occurance;
-	int i;
-	
+
 	counter = 0;
 	finder_str_counter = 0;
 	found_occurance = 0;
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	while (counter <= i)
+	while (s[counter] != '\0')
 	{
 		if (s[counter] == c)
 		{
 			found_occurance = 1;
-			while(s[counter] != '\0')
+			while (s[counter] != '\0')
 			{
 				finder_str[finder_str_counter] = s[counter];
 				counter++;
