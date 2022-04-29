@@ -5,7 +5,7 @@
  * @x: The number to be raised by an exponetial
  * @y: The exponential of x
  *
- * Returns: the reuslt of the arithemetic and -1 if y is lower than 0
+ * Return: the reuslt of the arithemetic and -1 if y is lower than 0
  */
 int _pow_recursion(int x, int y)
 {
