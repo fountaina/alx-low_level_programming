@@ -28,10 +28,6 @@ char string_looper(char *s, int l)
  */
 void string_reverser(char *s, int l)
 {
-	if (s[l] == '\0')
-	{
-		l--;
-	}
 	_putchar(s[l]);
 	if (s[l] != 0)
 	{
