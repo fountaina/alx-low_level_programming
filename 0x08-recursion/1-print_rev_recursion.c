@@ -8,14 +8,19 @@
  */
 void _print_rev_recursion(char *s)
 {
+	char **p;
+
+	p = &s;
+	p = (char *)(&s +1) - 1;
 	if (s[0] == 0)
 	{
-		_putchar('\n');
+		_putchar('\0');
 	}
-	else if (s[0] != 0)
+	else if (s[0] != '\0')
 	{
-		_putchar((char *)(&s + 1) - 1);
-		s--;
+		_putchar(p[0]);
+		--s;
 		_print_rev_recursion(s);
 	}
+
 }
