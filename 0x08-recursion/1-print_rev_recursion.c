@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * string_looper - loops through the string and returns it in reverse order
  * @s: the string
@@ -28,10 +29,10 @@ void string_reverser(char *s, int l)
 	{
 		string_reverser(s, l - 1);
 	}
-	else if (s[l] == 0)
+	/*else if (s[l] == 0)
 	{
 		_putchar('\0');
-	}
+	}*/
 }
 /**
  * _print_rev_recursion - prints a string in reverse order
@@ -45,4 +46,5 @@ void _print_rev_recursion(char *s)
 
 	l = string_looper(s, 0);
 	string_reverser(s, l);
+	printf("%d", l);
 }
