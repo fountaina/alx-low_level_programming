@@ -46,5 +46,4 @@ void _print_rev_recursion(char *s)
 
 	l = string_looper(s, 0);
 	string_reverser(s, l);
-	printf("%d", l);
 }
