@@ -1,1 +1,3 @@
 *.o
+quote
+*main.c
