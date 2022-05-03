@@ -11,4 +11,41 @@
  */
 int main(int argc, char **argv)
 {
+	int result;
 
+	if (argc < 2)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else if (atoi(argv[1]) < 1)
+	{
+		result = 0;
+	}
+	else if (atoi(argv[1]) == 1 || atoi(argv[1]) == 2)
+	{
+		result = 1;
+	}
+	else if (atoi(argv[1]) > 2 && atoi(argv[1]) < 5)
+	{
+		result = 1 + (atoi(argv[1]) - 2);
+	}
+	else if (atoi(argv[1]) >= 5 && atoi(argv[1]) < 10)
+	{
+		result = 1 + (atoi(argv[1]) - 5);
+	}
+	else if (atoi(argv[1]) >= 10 && atoi(argv[1]) < 25)
+	{
+		result = 1 + (atoi(argv[1]) - 10);
+	}
+	else if (atoi(argv[1]) >= 25)
+	{
+		result = 1 + (atoi(argv[1]) - 25);
+	}
+	else if (atoi(argv[1]) < 0)
+	{
+		result = 0;
+	}
+	printf("%d\n", result);
+	return (0);
+}
