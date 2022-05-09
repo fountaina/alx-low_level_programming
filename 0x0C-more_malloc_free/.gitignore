@@ -1,0 +1,6 @@
+*main.c
+[[:digit:]]*[!c]
+_putchar.c
+c
+s
+main_3.c
