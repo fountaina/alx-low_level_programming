@@ -40,7 +40,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		return (NULL);
 	}
-	for (marker = 0; marker < _strlen(s1); marker++)
+	for (marker = 0; marker < _strlen(s1); ++marker)
 	{
 		new_concat[marker] = s1[marker];
 	}
@@ -53,10 +53,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		num_s2 = length2;
 	}
-	for (counter = 0; counter < num_s2; counter++)
+	for (counter = 0; counter < num_s2; ++counter)
 	{
 		new_concat[marker] = s2[counter];
-		marker++;
+		++marker;
 	}
 	return (new_concat);
 }
