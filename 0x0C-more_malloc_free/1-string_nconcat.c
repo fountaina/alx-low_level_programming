@@ -10,11 +10,12 @@
 int _strlen(char *str)
 {
 	int counter;
-	unsigned int length = 0;
+	unsigned int length;
 
+	length = 0;
 	for (counter = 0; str[counter] != '\0'; counter++)
 	{
-		length++;
+		length = length + 1;
 	}
 	return (length);
 }
@@ -30,17 +31,18 @@ int _strlen(char *str)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int length2;
+	unsigned int length2, length1;
 	char *new_concat;
-	int marker, counter;
-	int num_s2;
-
+	unsigned int marker, counter;
+	unsigned int num_s2;
+	
+	length1 = _strlen(s1);
 	new_concat = malloc(sizeof(char) * (_strlen(s1) + n + 1));
 	if (new_concat == NULL)
 	{
 		return (NULL);
 	}
-	for (marker = 0; marker < _strlen(s1); ++marker)
+	for (marker = 0; marker < length1; ++marker)
 	{
 		new_concat[marker] = s1[marker];
 	}
