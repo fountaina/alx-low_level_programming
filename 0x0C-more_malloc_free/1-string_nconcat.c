@@ -31,34 +31,42 @@ int _strlen(char *str)
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int length2, length1;
+	unsigned int len_s1, len_s2, i;
 	char *new_concat;
-	unsigned int marker, counter;
-	unsigned int num_s2;
-	
-	length1 = _strlen(s1);
-	new_concat = malloc(sizeof(char) * (_strlen(s1) + n + 1));
-	if (new_concat == NULL)
+
+	if (s1 == NULL)
 	{
-		return (NULL);
-	}
-	for (marker = 0; marker < length1; ++marker)
-	{
-		new_concat[marker] = s1[marker];
-	}
-	length2 = _strlen(s2);
-	if (n < length2)
-	{
-		num_s2 = n;
+		len_s1 = 0;
 	}
 	else
 	{
-		num_s2 = length2;
+		for (len_s1 = 0; s1[len_s1] != '\0'; len_s1++)
+			;
 	}
-	for (counter = 0; counter < num_s2; ++counter)
+	if (s2 == NULL)
 	{
-		new_concat[marker] = s2[counter];
-		++marker;
+			len_s2 = 0;
 	}
+	else
+	{
+		for (len_s2 = 0; s2[len_s2] != '\0'; len_s2++)
+			;
+	}
+	if (len_s2 > n)
+	{
+		len_s2 = n;
+	}
+	new_concat = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (new_concat == NULL)
+		return (NULL);
+	for (i = 0; i < len_s1; i++)
+	{
+		new_concat[i] = s1[i];
+	}
+	for (i = 0; i < len_s2; i++)
+	{
+		new_concat[i + len_s1] = s2[i];
+	}
+	new_concat[i + len_s1] = '\0';
 	return (new_concat);
 }
