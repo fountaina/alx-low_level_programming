@@ -35,8 +35,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	int marker, counter;
 	int num_s2;
 
-	new_concat = malloc(sizeof(char) * (_strlen(s2) + n + 1));
-	printf("%ld\n", sizeof(new_concat));
+	new_concat = malloc(sizeof(char) * (_strlen(s1) + n + 1));
 	if (new_concat == NULL)
 	{
 		return (NULL);

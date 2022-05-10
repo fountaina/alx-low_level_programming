@@ -10,13 +10,15 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	void *p;
+	char *p;
+	int i = 0;
 
-	p = malloc(sizeof(b));
+	p = malloc(b);
 	if (p == NULL)
 	{
-		_putchar('9');
-		_putchar('8');
+		return (NULL);
 	}
+	for (i = 0; p[i] != '\0'; i++)
+		p[i] = 0;
 	return (p);
 }
