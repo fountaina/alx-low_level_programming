@@ -32,18 +32,18 @@ int main(int argc, char *argv[])
 			exit(100);
 		}
 	}
-	/*
-	if (
-	(strcmp(argv[2], "+") &&
-	(strcmp(argv[2], "-") &&
-	(strcmp(argv[2], "*") &&
-	(strcmp(argv[2], "/") &&
-	(strcmp(argv[2], "%"))))))
-	)
-	{
-		printf("Error\n");
-		exit(99);
-	}*/
+	/**
+	 * if (
+	 * (strcmp(argv[2], "+") &&
+	 * (strcmp(argv[2], "-") &&
+	 * (strcmp(argv[2], "*") &&
+	 * (strcmp(argv[2], "/") &&
+	 * (strcmp(argv[2], "%"))))))
+	 * )
+	 *
+	 * printf("Error\n");
+	 * exit(99);
+	 */
 	f = get_op_func(s)(a, b);
 	printf("%d\n", f);
 	return (0);
