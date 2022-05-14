@@ -16,21 +16,16 @@ int main(int argc, char *argv[])
 	int f, a, b;
 	char *s;
 
-	a = atoi(argv[1]);
-	b = atoi(argv[3]);
-	s = argv[2];
-	if (argc > 4 || argc < 4)
+	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (*(argv[2]) == '/' || *(argv[2]) == '%')
+	if ((strcmp(argv[2], "/") == 0 || strcmp(argv[2], "%") == 0) &&
+			atoi(argv[3]) == 0)
 	{
-		if (argv[3] == 0)
-		{
-			printf("Error\n");
-			exit(100);
-		}
+		printf("Error\n");
+		exit(100);
 	}
 	/**
 	 * if (
@@ -44,6 +39,9 @@ int main(int argc, char *argv[])
 	 * printf("Error\n");
 	 * exit(99);
 	 */
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+	s = argv[2];
 	f = get_op_func(s)(a, b);
 	printf("%d\n", f);
 	return (0);
