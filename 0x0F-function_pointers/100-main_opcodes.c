@@ -38,14 +38,13 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(1);
 	}
+	n = atoi(argv[1]);
 	if (n < 0)
 	{
 		printf("Error\n");
 		exit(2);
 	}
-	n = atoi(argv[1]);
-	a = (char *)&main;
-	print_opcodes(a, n);
+	print_opcodes((char *)&main, n);
 	return (0);
 }
 
