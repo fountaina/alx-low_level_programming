@@ -19,7 +19,8 @@ int _strlen(char *str)
 
 /**
  * _strcpy - returns a copy of a sting
- * @str: the string to be copied
+ * @dest: destination of copied string
+ * @src: the string to be copied
  *
  * Return: returns the string
  */
@@ -45,14 +46,15 @@ char *_strdup(char *str)
 {
 	char *dest;
 
-	dest = (char *) malloc(_strlen(str) + 1);
 	if (str == NULL)
 	{
 		return (NULL);
 	}
-	else
+	dest = (char *) malloc(_strlen(str) + 1);
+	if (dest == NULL)
 	{
-		_strcpy(dest, str);
+		return (NULL);
 	}
-	return dest;
+	_strcpy(dest, str);
+	return (dest);
 }
