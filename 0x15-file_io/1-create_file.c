@@ -10,7 +10,7 @@
  */
 size_t _strlen(char *str)
 {
-	size_t i;
+	size_t i = 0;
 
 	for (i = 0; str[i] != '\0'; i++)
 		;
