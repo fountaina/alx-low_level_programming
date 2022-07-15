@@ -2,20 +2,7 @@
 #include <stdio.h>
 #include "lists.h"
 
-/**
- * _strlen - prints the length of a string
- * @str: the string
- *
- * Return: the length of the string
- */
-int _strlen(const char *str)
-{
-	unsigned int i;
 
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	return (i);
-}
 /**
  * add_node - adds a new node to the beggineing of a linked list
  * @head: pointer to the beginning of a linked list
